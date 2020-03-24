@@ -1,19 +1,18 @@
 function createPhoneNumber(numbers) {
   number = [...numbers];
-  finalNUmber = '(';
+  finalNumber = '';
   for (let i = 0; i < number.length; i++) {
-    if (i < 3) {
-      finalNUmber += number[i];
+    if (i === 0) {
+      finalNumber += `(${number[i]}`;
     } else if (i === 3) {
-      finalNUmber += `) ${number[i]}`;
+      finalNumber += `) ${number[i]}`;
     } else if (i === 6) {
-      finalNUmber += `-${number[i]}`;
+      finalNumber += `-${number[i]}`;
     } else {
-      finalNUmber += number[i];
+      finalNumber += number[i];
     }
-
   }
-  return finalNUmber;
+  return finalNumber;
 }
 
 
